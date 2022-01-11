@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 
-
 export default function Navbar() {
   const [isClicked, setIsClicked] = useState<boolean>(false);
 
@@ -20,23 +19,15 @@ export default function Navbar() {
   const scrollToAdvantages = () => {
     const y = window.innerHeight * 2;
     window.scrollTo(0, y);
-    console.log(y);
   };
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${isClicked ? 'active' : ''}`}>
         <div className="navbar-container">
-          <button
-            className="navbar-logo"
-            onClick={() => {
-              closeMobileMenu();
-              goToBegin();
-            }}
-          >
-            <i className="fas fa-map-marker-alt" />
-            HubLocal
-          </button>
+          <a className="navbar-logo" onClick={closeMobileMenu} href=".">
+            <img className="logo-img" src="images/transparent-logo.gif" alt="HubLocal" />
+          </a>
           <button className="menu-icon" onClick={handleClick}>
             <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </button>
