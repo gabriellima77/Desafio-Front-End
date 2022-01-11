@@ -1,10 +1,12 @@
 import React from 'react';
 import Canvas from './Canvas';
+import ParallaxComponent from './Parallax';
 
 export default function Hero() {
-  return(
+  return (
     <section className="hero-section">
       <Canvas />
+      <ParallaxComponent />
     </section>
   );
 }

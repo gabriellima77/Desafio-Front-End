@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Canvas.css';
+import '../styles/Canvas.css';
 
 interface mousePoints {
   begin: point;
