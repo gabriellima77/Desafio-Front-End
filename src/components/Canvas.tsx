@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/Canvas.css';
 
 interface mousePoints {
   begin: point;
@@ -78,8 +77,8 @@ export default function Canvas() {
       setIndex((prev) => prev + 1);
       const i = Math.floor(index / 10);
       if (i > colors.length) setIndex(0);
-      const x = e?.clientX;
-      const y = e?.clientY;
+      const x = e?.pageX;
+      const y = e?.pageY;
       const start = points.begin;
       ctx.fillStyle = colors[i];
       ctx.strokeStyle = colors[i];

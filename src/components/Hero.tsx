@@ -12,10 +12,12 @@ export default function Hero() {
         <h1 className="hero-text">
           Sua empresa em todos os lugares da Internet!
         </h1>
-        <h3 className="hero-text-small">Seja encontrado em todos os mapas e listas.</h3>
-      </div>
-      <div className='bottom-box'>
-        
+        <h3 className="hero-text-small">
+          Seja encontrado em todos os mapas e listas.
+        </h3>
+        <button onClick={() => console.log(1)} className="action-btn">
+          Veja os nossos Planos!
+        </button>
       </div>
     </section>
   );

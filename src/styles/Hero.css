@@ -65,6 +65,7 @@
   width: 60%;
   height: 100%;
   filter: drop-shadow(-5px 6px 3px rgba(255, 255, 255, 0.5));
+  pointer-events: none;
 }
 
 .parallax-hero {
@@ -118,10 +119,45 @@
   object-fit: cover;
 }
 
-.moon {
+.sun {
   position: absolute;
   top: 0;
   right: 20px;
+}
+
+.action-btn {
+  margin-top: 10px;
+  border: 2px solid #4685fe;
+  text-shadow: 1px 2px 5px black;
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  pointer-events: all;
+  border-radius: 3px;
+}
+
+.action-btn::before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #4685fe;
+}
+
+.action-btn:hover::before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
 }
 
 @media (max-width: 650px) {

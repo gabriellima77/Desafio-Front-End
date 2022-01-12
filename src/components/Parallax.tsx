@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import '../styles/Parallax.css';
 import Parallax from 'parallax-js';
 
 export default function ParallaxComponent() {
@@ -8,13 +7,13 @@ export default function ParallaxComponent() {
     if (scene) new Parallax(scene);
   });
 
-  return (   
+  return (
     <div className="parallax-wrapper">
       <div className="parallax-hero">
         <div className="parallax-container">
           <div id="scene">
             <div data-depth="0.5" className="layer mountain">
-              <img className="bk" src="images/mountain.jpg" alt="montanha" />
+              <img className="bk" src="images/mountain2.jpg" alt="montanha" />
             </div>
             <div data-depth="0.1" className="layer">
               <img
@@ -24,7 +23,7 @@ export default function ParallaxComponent() {
               />
             </div>
             <div data-depth="0.6" className="layer">
-              <img className="moon" src="images/moon.png" alt="Lua" />
+              <img className="sun" src="images/moon.png" alt="Lua" />
             </div>
           </div>
         </div>

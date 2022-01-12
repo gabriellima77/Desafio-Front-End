@@ -1,8 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
   const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      const homeSection = document.querySelector('.hero-section');
+      const height = window.pageYOffset;
+      if (homeSection && height >= homeSection?.clientHeight) setIsActive(true);
+      else if (homeSection && height < homeSection?.clientHeight)
+        setIsActive(false);
+    };
+  });
 
   const handleClick = () => setIsClicked((prev) => !prev);
   const closeMobileMenu = () => setIsClicked(false);
@@ -23,10 +34,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar ${isClicked ? 'active' : ''}`}>
+      <nav className={`navbar ${isClicked || isActive ? 'active' : ''}`}>
         <div className="navbar-container">
           <a className="navbar-logo" onClick={closeMobileMenu} href=".">
-            <img className="logo-img" src="images/transparent-logo.gif" alt="HubLocal" />
+            <img
+              className="logo-img"
+              src={`images/${
+                isActive ? 'hublocal-logo.png' : 'transparent-logo.gif'
+              }`}
+              alt="HubLocal"
+            />
           </a>
           <button className="menu-icon" onClick={handleClick}>
             <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'}></i>
