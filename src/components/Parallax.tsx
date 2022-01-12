@@ -15,7 +15,7 @@ export default function ParallaxComponent() {
             <div data-depth="0.5" className="layer mountain">
               <img className="bk" src="images/mountain2.jpg" alt="montanha" />
             </div>
-            <div data-depth="0.1" className="layer">
+            <div data-depth="0.2" className="layer">
               <img
                 className="woman"
                 src="images/Woman.png"

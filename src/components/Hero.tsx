@@ -10,7 +10,7 @@ export default function Hero() {
       <ParallaxComponent />
       <div className="text-box">
         <h1 className="hero-text">
-          Sua empresa em todos os lugares da Internet!
+          Sua empresa em todos os lugares!
         </h1>
         <h3 className="hero-text-small">
           Seja encontrado em todos os mapas e listas.

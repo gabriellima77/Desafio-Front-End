@@ -4,14 +4,18 @@ import '../styles/Navbar.css';
 export default function Navbar() {
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isActive, setIsActive] = useState<boolean>(false);
+  const shadowSize = 10;
 
   useEffect(() => {
     window.onscroll = () => {
       const homeSection = document.querySelector('.hero-section');
-      const height = window.pageYOffset;
-      if (homeSection && height >= homeSection?.clientHeight) setIsActive(true);
-      else if (homeSection && height < homeSection?.clientHeight)
-        setIsActive(false);
+      const navHeight = document.querySelector('.navbar')?.clientHeight;
+      if (homeSection && navHeight) {
+        const height = window.pageYOffset;
+        const positionToChange = homeSection.clientHeight - navHeight + shadowSize;
+        if (homeSection && height >= positionToChange) setIsActive(true);
+        else if (homeSection && height < positionToChange) setIsActive(false);
+      }
     };
   });
 
@@ -23,8 +27,9 @@ export default function Navbar() {
   };
 
   const scrollToAbout = () => {
-    const y = document.querySelector('.hero-container')?.scrollHeight;
-    if (y) window.scrollTo(0, y);
+    const y = document.querySelector('.hero-section')?.scrollHeight;
+    const navHeight = document.querySelector('.navbar')?.clientHeight;
+    if (y && navHeight) window.scrollTo(0, y - navHeight + shadowSize);
   };
 
   const scrollToAdvantages = () => {

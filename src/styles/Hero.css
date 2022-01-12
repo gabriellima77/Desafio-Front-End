@@ -138,6 +138,7 @@
   padding: 10px 20px;
   pointer-events: all;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .action-btn::before {
@@ -179,5 +180,13 @@
 
   .bk {
     width: 100%;
+  }
+
+  .hero-text {
+    font-size: 32px;
+  }
+
+  .hero-text-small {
+    font-size: 20px;
   }
 }
