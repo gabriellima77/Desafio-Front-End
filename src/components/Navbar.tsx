@@ -48,7 +48,6 @@ export default function Navbar({ setShowUpBtn }: setValue) {
     const y = document.querySelector<HTMLElement>('.pricing')?.offsetTop;
     const navHeight = document.querySelector('.navbar')?.clientHeight;
     if (y && navHeight) {
-      console.log(y);
       window.scrollTo(0, y - navHeight);
     }
   };
