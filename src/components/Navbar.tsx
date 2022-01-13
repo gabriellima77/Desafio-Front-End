@@ -46,9 +46,8 @@ export default function Navbar({ setShowUpBtn }: setValue) {
 
   const scrollToPricing = () => {
     const y = document.querySelector<HTMLElement>('.pricing')?.offsetTop;
-    const navHeight = document.querySelector('.navbar')?.clientHeight;
-    if (y && navHeight) {
-      window.scrollTo(0, y - navHeight);
+    if (y) {
+      window.scrollTo(0, y);
     }
   };
 
