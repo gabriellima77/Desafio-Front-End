@@ -1,4 +1,135 @@
 .pricing {
+  padding: 50px 0;
   width: 100%;
   min-height: 100vh;
+  background: rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.princing-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.price-card {
+  padding: 0 10px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid rgb(209, 209, 209);
+  transition: border 0.5s linear;
+}
+
+.white {
+  box-sizing: unset;
+  background-color: white;
+  color: #4685fe;
+  height: 100%;
+  width: 225px;
+  text-align: center;
+  transition: box-shadow 0.5s linear;
+}
+
+.white:hover {
+  box-shadow: -1px 0px 5px #4685fe;
+}
+
+.price-card:hover {
+  border: 1px solid #00da91;
+}
+
+.price-type {
+  padding: 0 20px 0 10px;
+  color: #4685fe;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.price-logo {
+  width: 48px;
+  margin: 0;
+}
+
+.logo-text {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.content-container {
+  margin-bottom: 30px;
+}
+
+.price-content {
+  color: #4685fe;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.price-content i {
+  margin-right: 10px;
+}
+
+.text-container {
+  width: 90%;
+  margin-top: -20px;
+}
+
+.price-btn {
+  padding: 5px 0;
+  background-color: #4685fe;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  transition: all 0.25s linear;
+}
+
+.price-btn:hover {
+  background-color: #00da91;
+}
+
+.green {
+  background-color: #00da91;
+}
+
+.green:hover {
+  background-color: #4685fe;
+}
+
+@media (max-width: 925px) {
+  .princing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-container {
+    width: 90%;
+  }
+
+  .price-card {
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0 0 5%;
+  }
+
+  .price-btn {
+    margin-bottom: 20px;
+  }
 }
