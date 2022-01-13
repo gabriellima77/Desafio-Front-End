@@ -15,25 +15,25 @@ export default function About() {
       <div className="cards-container">
         <CardItem
           src="images/66260.jpg"
-          text="Testando"
+          text="Verifique a presença da sua empresa nos mapas e listas da internet de forma otimizada."
           alt="Análise de Presença"
           index="01"
         />
         <CardItem
           src="images/20944035.jpg"
-          text="Testando"
+          text="A HubLocal usará as funcionalidades de correção automatizada, mantendo assim as informações do seu negócio sempre completas e atualizadas."
           alt="Correção de Presença"
           index="02"
         />
         <CardItem
           src="images/19198945.jpg"
-          text="Testando"
+          text="Com as funcionalidades de divulgação da HubLocal, fica fácil divulgar promoções, cupons e campanhas regionais de sua empresa."
           alt="Manutenção de Presença"
           index="03"
         />
         <CardItem
           src="images/analyze.jpg"
-          text="Testando"
+          text="Com os relatórios de inteligência de mercado da HubLocal, você irá descubrir quais são as suas melhores fontes de novos clientes."
           alt="Análise de Resultados"
           index="04"
         />

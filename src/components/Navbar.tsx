@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 
-export default function Navbar() {
+interface setValue {
+  setShowUpBtn: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Navbar({ setShowUpBtn }: setValue) {
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isActive, setIsActive] = useState<boolean>(false);
   const shadowSize = 10;
 
+  // Change Nav color and logo based on window location
   useEffect(() => {
     window.onscroll = () => {
       const homeSection = document.querySelector('.hero-section');
       const navHeight = document.querySelector('.navbar')?.clientHeight;
       if (homeSection && navHeight) {
         const height = window.pageYOffset;
-        const positionToChange = homeSection.clientHeight - navHeight + shadowSize;
+
+        // Active upButton at scroll distance of navHeight
+        if (height >= navHeight) setShowUpBtn(true);
+        else setShowUpBtn(false);
+
+        // Change Navbar and logo at scroll distece of positionToChange
+        const positionToChange =
+          homeSection.clientHeight - navHeight + shadowSize;
         if (homeSection && height >= positionToChange) setIsActive(true);
         else if (homeSection && height < positionToChange) setIsActive(false);
       }
@@ -32,9 +44,13 @@ export default function Navbar() {
     if (y && navHeight) window.scrollTo(0, y - navHeight + shadowSize);
   };
 
-  const scrollToAdvantages = () => {
-    const y = window.innerHeight * 2;
-    window.scrollTo(0, y);
+  const scrollToPricing = () => {
+    const y = document.querySelector<HTMLElement>('.pricing')?.offsetTop;
+    const navHeight = document.querySelector('.navbar')?.clientHeight;
+    if (y && navHeight) {
+      console.log(y);
+      window.scrollTo(0, y - navHeight);
+    }
   };
 
   return (
@@ -81,10 +97,10 @@ export default function Navbar() {
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenu();
-                  scrollToAdvantages();
+                  scrollToPricing();
                 }}
               >
-                Vantagens
+                Planos
               </button>
             </li>
           </ul>

@@ -5,7 +5,7 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background: rgb(14, 14, 14);
+  background: rgb(20, 20, 20);
   padding-bottom: 20px;
   position: relative;
 }
@@ -46,7 +46,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 350px;
-  height: 65vh;
+  height: 450px;
   background-color: rgb(37, 37, 37);
   transition: all 0.15s linear;
 }
@@ -93,4 +93,21 @@
 
 .container-text * {
   color: white;
+}
+
+.text-content {
+  width: 92%;
+  margin-top: 10px;
+}
+
+@media (max-width: 550px) {
+  .section-header {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-item {
+    width: 90%;
+  }
 }
