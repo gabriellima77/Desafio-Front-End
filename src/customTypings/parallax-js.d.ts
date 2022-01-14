@@ -1,28 +1,5 @@
 declare module 'parallax-js' {
-  export interface ParallaxOptions {
-    precision?: number;
-    relativeInput?: boolean;
-    clipRelativeInput?: boolean;
-    hoverOnly?: boolean;
-    inputElement?: string | HTMLElement | null;
-    pointerEvents?: boolean;
-    calibrateX?: boolean;
-    calibrateY?: boolean;
-    invertX?: boolean;
-    invertY?: boolean;
-    limitX?: number | false;
-    limitY?: number | false;
-    scalarX?: number;
-    scalarY?: number;
-    frictionX?: number;
-    frictionY?: number;
-    originX?: number;
-    originY?: number;
-    selector?: string | null;
-    onReady?: () => void;
-  }
-
-  export class Parallax {
+  export default class Parallax {
     private inputElement?: string | HTMLElement | null;
     private calibrateX?: boolean;
     private calibrateY?: boolean;
@@ -45,7 +22,8 @@ declare module 'parallax-js' {
     public selector?: string | null;
     public onReady?: () => void;
 
-    constructor(element: HTMLElement, options: ParallaxOptions);
+    constructor(element: HTMLElement, options?: IParallaxOptions);
+
     public enable(): void;
     public disable(): void;
     public destroy(): void;
@@ -57,5 +35,28 @@ declare module 'parallax-js' {
     public scalar(x: number, y: number): void;
     public friction(x: number, y: number): void;
     public origin(x: number, y: number): void;
+  }
+
+  export interface IParallaxOptions {
+    precision?: number;
+    relativeInput?: boolean;
+    clipRelativeInput?: boolean;
+    hoverOnly?: boolean;
+    inputElement?: string | HTMLElement | null;
+    pointerEvents?: boolean;
+    calibrateX?: boolean;
+    calibrateY?: boolean;
+    invertX?: boolean;
+    invertY?: boolean;
+    limitX?: number | false;
+    limitY?: number | false;
+    scalarX?: number;
+    scalarY?: number;
+    frictionX?: number;
+    frictionY?: number;
+    originX?: number;
+    originY?: number;
+    selector?: string | null;
+    onReady?: () => void;
   }
 }
