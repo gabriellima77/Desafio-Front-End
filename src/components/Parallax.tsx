@@ -5,7 +5,7 @@ export default function ParallaxComponent() {
   useEffect(() => {
     const scene = document.getElementById('scene');
     if (scene) new Parallax(scene);
-  });
+  }, []);
 
   return (
     <div className="parallax-wrapper">
