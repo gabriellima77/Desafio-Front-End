@@ -45,7 +45,7 @@
 .card-item {
   opacity: 0;
   position: relative;
-  top: 100px;
+  top: 50px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 350px;
