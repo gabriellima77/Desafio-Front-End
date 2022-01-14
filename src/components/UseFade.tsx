@@ -30,6 +30,7 @@ export default function UseFade(type: type) {
 
   useEffect(() => {
     window.addEventListener('scroll', fadeEvent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { isActive };
