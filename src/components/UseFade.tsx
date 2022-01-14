@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 type type = 'top' | 'left';
 
@@ -9,7 +9,7 @@ export default function UseFade(type: type) {
     let y = document.querySelector('.hero-section')?.scrollHeight;
     const navHeight = document.querySelector('.navbar')?.clientHeight;
     const height = window.pageYOffset;
-    const percentage = 3 / 5;
+    const distance = 300;
 
     if (type === 'left') {
       y = document.querySelector<HTMLElement>('.pricing')?.offsetTop;
@@ -17,11 +17,12 @@ export default function UseFade(type: type) {
 
     if (y && navHeight) {
       if (type === 'top') {
-        const position = Math.round((y - navHeight) * percentage);
+        const position = Math.round(y - navHeight - distance);
         if (height >= position) setIsActive(true);
         else setIsActive(false);
       } else {
-        if (height >= y) setIsActive(true);
+        const position = Math.round(y - distance);
+        if (height >= position) setIsActive(true);
         else setIsActive(false);
       }
     }

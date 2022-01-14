@@ -3,10 +3,16 @@ import React from 'react';
 interface cardProps {
   type: string;
   content: Array<string>;
-  text: string | undefined;
+  text?: string;
+  isActive: boolean;
 }
 
-export default function PriceCard({ type, content, text }: cardProps) {
+export default function PriceCard({
+  type,
+  content,
+  text,
+  isActive,
+}: cardProps) {
   const createContent = (text: string, key: number) => (
     <p key={key} className="price-content">
       <i style={{ color: '#00da91' }} className="fas fa-check"></i>
@@ -15,7 +21,7 @@ export default function PriceCard({ type, content, text }: cardProps) {
   );
 
   return (
-    <div className="plan-container">
+    <div className={`plan-container ${isActive ? 'active' : ''}`}>
       <div className={`price-card ${text ? 'white' : ''}`}>
         <div className="price-type">
           <img className="price-logo" src="logo192.png" alt="Logo HubLocal" />

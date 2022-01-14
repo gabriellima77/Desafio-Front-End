@@ -1,8 +1,11 @@
 import React from 'react';
 import '../styles/Pricing.css';
 import PriceCard from './PriceCard';
+import UseFade from './UseFade';
 
 export default function Pricing() {
+  const { isActive } = UseFade('left');
+
   return (
     <section className="pricing">
       <div className="header-container">
@@ -12,7 +15,7 @@ export default function Pricing() {
         <PriceCard
           type="Start"
           content={['CADASTRO MAPAS E LISTAS', 'ACESSO AO GERENCIADOR']}
-          text={undefined}
+          isActive={isActive}
         />
         <PriceCard
           type="Standard"
@@ -23,7 +26,7 @@ export default function Pricing() {
             'PUBLICAÇÃO DE CONTEÚDOS',
             'GESTÃO DE AVALIAÇÕES',
           ]}
-          text={undefined}
+          isActive={isActive}
         />
         <PriceCard
           type="Premium"
@@ -36,12 +39,13 @@ export default function Pricing() {
             'MAPA DE ORIGEM DE ROTAS',
             'BUSINESS INTELLIGENCE',
           ]}
-          text={undefined}
+          isActive={isActive}
         />
         <PriceCard
           type="Enterprise"
           content={['PLANO CUSTOMIZÁVEL']}
           text="Ideal para rede de empresas com múltiplas unidades de negócios e pontos de vendas."
+          isActive={isActive}
         />
       </div>
     </section>
