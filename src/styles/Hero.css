@@ -111,7 +111,7 @@
   height: 100%;
 }
 
-.woman {
+.man {
   position: absolute;
   bottom: 0;
   left: 10%;
@@ -119,10 +119,11 @@
   object-fit: cover;
 }
 
-.sun {
+.moon {
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 20px;
+  width: 200px;
 }
 
 .action-btn {

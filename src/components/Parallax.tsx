@@ -12,18 +12,18 @@ export default function ParallaxComponent() {
       <div className="parallax-hero">
         <div className="parallax-container">
           <div id="scene">
-            <div data-depth="0.5" className="layer mountain">
+            <div data-depth="0.6" className="layer mountain">
               <img className="bk" src="images/mountain2.jpg" alt="montanha" />
             </div>
-            <div data-depth="0.2" className="layer">
+            <div data-depth="0.6" className="layer">
               <img
-                className="woman"
-                src="images/Woman.png"
-                alt="mulher observando"
+                className="man"
+                src="images/man1.png"
+                alt="homem explorador"
               />
             </div>
-            <div data-depth="0.6" className="layer">
-              <img className="sun" src="images/moon.png" alt="Lua" />
+            <div data-depth="0.5" className="layer">
+              <img className="moon" src="images/moon1.png" alt="Lua" />
             </div>
           </div>
         </div>
