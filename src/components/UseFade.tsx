@@ -1,28 +1,19 @@
 import { useState, useEffect } from 'react';
 
-type type = 'top' | 'left';
+type Distance = number;
 
-export default function UseFade(type: type) {
+export default function UseFade(distance: Distance) {
   const [isActive, setIsActive] = useState(false);
-
   const fadeEvent = () => {
-    let y = document.querySelector<HTMLElement>('.cards-container')?.offsetTop;
-    const navHeight = document.querySelector('.navbar')?.clientHeight;
+    let y =
+      distance > 0
+        ? document.querySelector<HTMLElement>('.cards-container')?.offsetTop
+        : document.querySelector<HTMLElement>('.pricing')?.offsetTop;
     const height = window.pageYOffset;
-    const distance = 300;
-    if (type === 'left') {
-      y = document.querySelector<HTMLElement>('.pricing')?.offsetTop;
-    }
-    if (y && navHeight) {
-      if (type === 'top') {
-        const position = Math.round(y + distance);
-        if (height >= position) setIsActive(true);
-        else setIsActive(false);
-      } else {
-        const position = Math.round(y - distance);
-        if (height >= position) setIsActive(true);
-        else setIsActive(false);
-      }
+    if (y) {
+      const position = Math.round(y + distance);
+      if (height >= position) setIsActive(true);
+      else setIsActive(false);
     }
   };
 

@@ -4,7 +4,7 @@ import PriceCard from './PriceCard';
 import UseFade from './UseFade';
 
 export default function Pricing() {
-  const { isActive } = UseFade('left');
+  const { isActive } = UseFade(-300);
 
   return (
     <section className="pricing">

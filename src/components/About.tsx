@@ -5,7 +5,7 @@ import Content from './Content';
 import UseFade from './UseFade';
 
 export default function About() {
-  const { isActive } = UseFade('top');
+  const { isActive } = UseFade(200);
 
   return (
     <section className="about">
