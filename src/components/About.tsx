@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/About.css';
 import CardItem from './CardItem';
+import Content from './Content';
 import UseFade from './UseFade';
 
 export default function About() {
-  const {isActive} = UseFade('top');
+  const { isActive } = UseFade('top');
 
   return (
     <section className="about">
@@ -14,7 +15,10 @@ export default function About() {
         </h2>
         <p className="header-smaller">...mas como funciona?</p>
       </div>
-
+      <Content />
+      <h3 className="subsection-header">
+        A HubLocal faz isso para sua empresa através de 4 passos:
+      </h3>
       <div className="cards-container">
         <CardItem
           src="images/presenca.jpg"

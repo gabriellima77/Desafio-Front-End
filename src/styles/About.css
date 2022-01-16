@@ -109,6 +109,90 @@
   margin-top: 10px;
 }
 
+.info-container {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+}
+
+.content-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-text {
+  color: white;
+  width: 90%;
+  margin-bottom: 50px;
+}
+
+.strong {
+  background-color: #00da91;
+  color: rgb(20, 20, 20);
+}
+
+.scene-container {
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+
+.space-img {
+  width: 100%;
+}
+
+.layer-img {
+  width: min-content;
+}
+
+.planet {
+  margin-top: 10%;
+}
+
+.apple {
+  margin-top: 25%;
+  margin-left: 30%;
+}
+
+.facebook {
+  margin-top: 50%;
+  margin-left: 10%;
+}
+
+.bing {
+  margin-top: 60%;
+  margin-left: 45%;
+}
+
+.google {
+  margin-top: 40%;
+  margin-left: 35%;
+}
+
+.subsection-header {
+  margin: 50px 0 0 0;
+  color: #4685fe;
+  border-bottom: 3px solid #00da91;
+}
+
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+  }
+
+  .content-box {
+    width: 100%;
+  }
+
+  .scene-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 550px) {
   .section-header {
     border-bottom: none;

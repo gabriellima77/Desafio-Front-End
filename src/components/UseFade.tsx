@@ -6,18 +6,16 @@ export default function UseFade(type: type) {
   const [isActive, setIsActive] = useState(false);
 
   const fadeEvent = () => {
-    let y = document.querySelector('.hero-section')?.scrollHeight;
+    let y = document.querySelector<HTMLElement>('.cards-container')?.offsetTop;
     const navHeight = document.querySelector('.navbar')?.clientHeight;
     const height = window.pageYOffset;
     const distance = 300;
-
     if (type === 'left') {
       y = document.querySelector<HTMLElement>('.pricing')?.offsetTop;
     }
-
     if (y && navHeight) {
       if (type === 'top') {
-        const position = Math.round(y - navHeight - distance);
+        const position = Math.round(y + distance);
         if (height >= position) setIsActive(true);
         else setIsActive(false);
       } else {
