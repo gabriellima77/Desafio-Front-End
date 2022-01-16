@@ -64,7 +64,7 @@ export default function Navbar({ setShowUpBtn }: setValue) {
               alt="HubLocal"
             />
           </a>
-          <button className="menu-icon" onClick={handleClick}>
+          <button aria-label="menu" className="menu-icon" onClick={handleClick}>
             <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </button>
           <ul className={isClicked ? 'nav-menu active' : 'nav-menu'}>

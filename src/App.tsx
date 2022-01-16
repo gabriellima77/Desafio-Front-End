@@ -15,6 +15,7 @@ function App() {
       <Navbar setShowUpBtn={setShowUpBtn} />
       <button
         onClick={goUp}
+        aria-label="começo"
         className={`up-button ${showUpBtn ? 'active' : ''}`}
       >
         <i className="fas fa-angle-double-up"></i>
