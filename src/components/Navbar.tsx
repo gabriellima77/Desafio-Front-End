@@ -57,10 +57,9 @@ export default function Navbar({ setShowUpBtn }: setValue) {
         <div className="navbar-container">
           <a className="navbar-logo" onClick={closeMobileMenu} href=".">
             <img
+              width="150px"
               className="logo-img"
-              src={`images/${
-                isActive ? 'hublocal-logo.png' : 'transparent-logo.gif'
-              }`}
+              src={`images/${isActive ? 'hublocal-logo.png' : 'logo-gif.gif'}`}
               alt="HubLocal"
             />
           </a>
